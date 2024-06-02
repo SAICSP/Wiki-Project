@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="Wikipedia is a free online encyclopedia, created and edited by volunteers around the world and hosted by the Wikimedia Foundation." >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="original.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="//upload.wikimedia.org">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Wikipedia </title>
+</head>
+<body>
+    <div class="main">
+        <div class="head  translate "> <span><b><h1>WikipediA</h1></b>
+            The Free Encyclopedia</span>
+        </div>
+        <div class="editor">
+            <h6>selector</h6>
+            <span id="sizee">
+                <b>size:</b>
+                <select name="" id="sizelist">
+                    <option value="large">font size</option>
+                    <option value="large">large</option>
+                    <option value="medium">medium</option>
+                    <option value="small">small</option>
+                </select>
+            </span>
+        
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    select color
+                </button>
+                <ul class="dropdown-menu">
+                    <li><button type="button" value="blue" class="btn btn-primary">blue</button></li>
+                    <li><button type="button" value="gray" class="btn btn-secondary">gray</button></li>
+                    <li><button type="button" value="green" class="btn btn-success">green</button></li>
+                    <li><button type="button" value="red" class="btn btn-danger">red</button></li>
+                    <li><button type="button" value="yellow" class="btn btn-warning">yellow</button></li>
+                    <li><button type="button" value="aqua" class="btn btn-info">aqua</button></li>
+                    <li><button type="button" value="white" class="btn btn-light">white</button></li>
+                    <li><button type="button" value="black" class="btn btn-dark">black</button></li>
+                </ul>
+            </div>
+            <br>
+            <button type="button" value="apply" class="btn btn-primary apply translate">apply</button>
+        </div>
+        <br><br><br>
+        <div class="middle  ">
+            <img src="project.jfif" alt="wikipedia globe image" id="mainimg">            
+        </div><br>
+        <div class="search  ">
+            <nav class="navbar  bg-light data-bs-theme=dark navbar-expand-lg  sticky-top">
+                <form  action="" class="d-flex" role="search" >
+                    <input class="form-control me-2" id="searchInput" type="search" placeholder="search on wikipedia" aria-label="Search" >
+                    <div id="google_translate_element"></div>
+                    <button type="submit" class="btn btn-primary searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </nav>
+            
+        </div>
+        <br>
+        
+        <hr>
+    <div id="searchResults" class="container mt-4"></div>
+        <div class="maininfo  "> 
+            
+            <div class="infoleft">
+                <div class="cardinfo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Wikimedia-logo_black.svg/768px-Wikimedia-logo_black.svg.png" alt="wikipedia img">
+                    <p><b>Wikipedia is hosted by the Wikimedia</b> <br>
+                        Foundation, a non-profit organization that also hosts a range of other projects.
+                        <a href="https://donate.wikimedia.org/w/index.php?title=Special:LandingPage&country=IN&uselang=en&utm_medium=portal&utm_source=portalFooter&utm_campaign=portalFooter">you can support to our work with a donation</a>
+                    </p>
+                </div>
+                <div class="cardinfo">
+                    <img src="original.png" alt="wikipedia img">
+                    <p><a href="https://en.wikipedia.org/wiki/List_of_Wikipedia_mobile_applications"> <b>Download Wikipedia for Andriod or Ios</b></a><br>
+                    Save your favorite articles to read offline, sync your reading lists across devices and customize your reading
+                    experience with the official Wikipedia app.
+                    </p>
+                </div>
+            </div>
+            <div class="inforight">
+                <div class="cardbox">
+                <img src="Commons-logo-en.svg_.png" alt="wkikimg">
+                    <a href="https://commons.wikimedia.org/wiki/Main_Page">Commons</a>
+                    <p>Free media collection</p>
+                </div>
+                <div class="cardbox">
+                <img src="voyage.png" alt="wkikimg">
+                    <a href="https://www.wikivoyage.org/">Wikivoyage</a>
+                    <p>Free travel guide</p>
+                </div>
+                <div class="cardbox">
+                <img src="wiktionary_178396.webp" alt="wkikimg">
+                    <a href="https://www.wiktionary.org/">Wikitionary</a>
+                    <p>Free dictionary</p>
+                </div>
+                <div class="cardbox">
+                <img src="wikibooks.png" alt="wkikimg">
+                    <a href="https://www.wikibooks.org/">Wikibooks</a>
+                    <p>Free textbooks</p>
+                </div>
+                <div class="cardbox">
+                <img src="1000px-Wikinews-logo.svg.png" alt="wkikimg">
+                    <a href="https://www.wikinews.org/">Wikinews</a>
+                    <p>Free news source</p>
+                </div>
+                <div class="cardbox">
+                <img src="wikidata.png" alt="wkikimg">
+                    <a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikidata</a>
+                    <p>Free knowledge base</p>
+                </div>
+                <div class="cardbox">
+                <img src="Wikiversity-logo-tiles_2x.png" alt="wkikimg">
+                    <a href="https://www.wikiversity.org/">Wikiuniversity</a>
+                    <p>Free learning resoures</p>
+                </div>
+                <div class="cardbox">
+                <img src="Wikiquote_logo_logotype.png" alt="wkikimg">
+                    <a href="https://www.wikiquote.org/">Wikiquote</a>
+                    <p>Free quote compendium</p>
+                </div>
+                <div class="cardbox">
+                <img src="1200px-MediaWiki-2020-logo.svg.png" alt="wkikimg">
+                    <a href="https://www.mediawiki.org/wiki/MediaWiki">MediaWiki</a>
+                    <p>Free &amp; open wiki software</p>
+                </div>
+                <div class="cardbox">
+                <img src="wikisource.webp" alt="wkikimg">
+                    <a href="https://wikisource.org/wiki/Main_Page">Wikisource</a>
+                    <p>Free content library</p>
+                </div>
+                <div class="cardbox">
+                <img src="Wikispecies-logo.svg.png" alt="wkikimg">
+                    <a href="https://species.wikimedia.org/wiki/Main_Page">Wikispecies</a>
+                    <p>Free species directory</p>
+                </div>
+                <div class="cardbox">
+                <img src="Wikifunctions-logo-en.svg.png" alt="wkikimg">
+                    <a href="https://www.wikifunctions.org/wiki/Wikifunctions:Main_Page">Wikifunctions</a>
+                    <p>Free function library</p>
+                </div>
+                <div class="cardbox">
+                <img src="metawiki.png" alt="wkikimg">
+                    <a href="https://meta.wikimedia.org/wiki/Main_Page">Meta-Wiki</a>
+                    <p>Community coordination &amp; documentation</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="bottom  ">
+            This page is available under the Creative Common Attribution-ShareAlike license&nbsp;&nbsp;&nbsp;
+            
+            <a href="https://meta.wikimedia.org/wiki/Terms_of_use">terms of use</a>&nbsp;&nbsp;&nbsp;
+            <a href="https://meta.wikimedia.org/wiki/Privacy_policy">privacy policy</a>
+        </div>
+    </div>
+    <script src="script.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit(){
+            new google.translate.TranslateElement(
+                
+                    {pageLanguage:'en'},
+                'google_translate_element'
+                
+            );
+        }
+    </script>
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
+
