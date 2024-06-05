@@ -33,19 +33,23 @@ body {
 
 .editor {
     border: 2px solid black;
-    width: 150px;
+    width: 350px;
     height: auto;
     align-self: end;
     position: absolute;
-    top: 250px;
+    top: 200px;
     padding: 10px;  
     box-sizing: border-box;
+    background-color: #F5E556;
+    border-radius: 15px;
 }
 
 .editor:hover {
     box-shadow: 16px 16px 15px black;
     transition: ease-in-out 0.6s;
     background-color: black;
+    color:#fff;
+    
 }
 
 .editor h6,
@@ -85,18 +89,20 @@ h6 {
     height: 45px;
 }
 
-#sizee {
-    background-color: #abf;
-}
-
 .apply {
     width: 100%;
 }
 
 #mainimg:hover {
     cursor: pointer;
-    width: 230px;
-    height: 230px;
+    /* width: 230px; */
+    /* height: 230px; */
+    box-shadow: 16px 16px 50px black;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    transition: ease-in-out 0.6s;
 }
 
 .maininfo {
@@ -219,4 +225,8 @@ h6 {
         flex: 0 0 calc(100% - 20px);
         margin: 10px 0;
     }
+}
+#foo:hover{
+    background-color:#fff;
+    font-weight: 900;
 }

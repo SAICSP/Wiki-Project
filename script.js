@@ -2,9 +2,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const applyBtn = document.querySelector(".apply");
     applyBtn.addEventListener("click", function() {
         const fontSize = document.getElementById("sizelist").value;
+        const fontFamily = document.getElementById("fontlist").value;
         const selectedColor = document.querySelector(".dropdown-menu .active").textContent.trim().toLowerCase();
+        const themecolor=document.getElementById("modelist").value;
         
         document.body.style.fontSize = fontSize;
+        document.body.style.fontFamily = fontFamily; // Correctly set font family
+        document.body.style.backgroundColor=themecolor;
         document.body.style.color = selectedColor;
     });
         
@@ -18,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    let searchBtn = document.querySelector(".searchBtn");
+    const searchBtn = document.querySelector(".searchBtn");
     searchBtn.addEventListener("click", function(event) {
         event.preventDefault();
         const searchInput = document.getElementById("searchInput").value;
@@ -28,53 +32,51 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     function fetchSearchResults(query) {
-        const url = `https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(query)}&format=json&origin=*`;
+        const url = `https://api.duckduckgo.com/?q=${encodeURIComponent(query)}&format=json&pretty=1&no_html=1&skip_disambig=1`;
         
         fetch(url)
             .then(response => response.json())
-            .then(data => displayResults(data.query.search))
+            .then(data => displayResults(data))
             .catch(error => console.error('Error fetching search results:', error));
     }
 
-    function displayResults(results) {
+    function displayResults(data) {
         const searchResults = document.getElementById("searchResults");
         searchResults.innerHTML = "";
 
-        if (results.length === 0) {
+        if (!data.AbstractText) {
             searchResults.innerHTML = "<p>No results found.</p>";
             return;
         }
 
-        results.forEach(result => {
-            const resultItem = document.createElement("div");
-            resultItem.classList.add("result-item", "mb-3", "p-3", "border", "rounded");
+        const resultItem = document.createElement("div");
+        resultItem.classList.add("result-item", "mb-3", "p-3", "border", "rounded");
 
-            const title = document.createElement("h5");
-            title.innerHTML = result.title;
+        const title = document.createElement("h5");
+        title.innerHTML = data.Heading;
 
-            const snippet = document.createElement("p");
-            snippet.innerHTML = result.snippet;
+        const snippet = document.createElement("p");
+        snippet.innerHTML = data.AbstractText;
 
-            const link = document.createElement("a");
-            link.href = `https://en.wikipedia.org/wiki/${encodeURIComponent(result.title)}`;
-            link.target = "_blank";
-            link.textContent = "Read more";
+        resultItem.appendChild(title);
+        resultItem.appendChild(snippet);
 
-            resultItem.appendChild(title);
-            resultItem.appendChild(snippet);
-            resultItem.appendChild(link);
+        if (data.RelatedTopics && data.RelatedTopics.length > 0) {
+            const relatedTitle = document.createElement("h5");
+            relatedTitle.innerHTML = "Related Topics:";
+            resultItem.appendChild(relatedTitle);
 
-            searchResults.appendChild(resultItem);
-        });
+            const relatedList = document.createElement("ul");
+            data.RelatedTopics.forEach(topic => {
+                if (topic.Text) {
+                    const listItem = document.createElement("li");
+                    listItem.textContent = topic.Text;
+                    relatedList.appendChild(listItem);
+                }
+            });
+            resultItem.appendChild(relatedList);
+        }
+
+        searchResults.appendChild(resultItem);
     }
 });
-
-
-
-
-
-let searchBtn = document.querySelector(".searchBtn");
-searchBtn.addEventListener("click", function() {
-    console.log("I am clicked");
-});
-

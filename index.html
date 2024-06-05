@@ -7,13 +7,42 @@
     <link rel="icon" href="original.png">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="//upload.wikimedia.org">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">         
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link
+                href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+                rel="stylesheet">
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+                    rel="stylesheet">
+                    <link rel="preconnect" href="https://fonts.googleapis.com">
+                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+                        rel="stylesheet">
+                        <link rel="preconnect" href="https://fonts.googleapis.com">
+                        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                        <link
+                            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+                            rel="stylesheet">
+                            <link rel="preconnect" href="https://fonts.googleapis.com">
+                            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                            <link
+                                href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Tiny5&display=swap"
+                                rel="stylesheet">
     <title>Wikipedia </title>
 </head>
 <body>
@@ -21,21 +50,42 @@
         <div class="head  translate "> <span><b><h1>WikipediA</h1></b>
             The Free Encyclopedia</span>
         </div>
-        <div class="editor">
-            <h6>selector</h6>
+        <span class="editor">
+            
+            <b >Font Family:</b>
+            <select name="" id="fontlist">
+                <option value="Roboto, sans-serif">Roboto</option>
+                <option value="Montserrat, sans-serif">Montserrat</option>
+                <option value="sans-serif">Sans-serif</option>
+                <option value="PT Serif">Pt Serif</option>
+                <option value="Open Sans">Open Sans</option>
+                <option value="Raleway">Raleway</option>
+                <option value="Lato">Lato</option>
+                <option value="Tiny5">Tiny5</option>
+            </select><br>
             <span id="sizee">
-                <b>size:</b>
+                <b>Font Size:</b>
                 <select name="" id="sizelist">
-                    <option value="large">font size</option>
                     <option value="large">large</option>
                     <option value="medium">medium</option>
                     <option value="small">small</option>
                 </select>
             </span>
-        
+        <br>
+            <b>Theme:   </b>
+            <select name="" id="modelist">
+                <option>select</option>
+                <option value="black">black</option>
+                <option value="red">red</option>
+                <option value="aqua">aqua</option>
+                <option value="yellow">yellow</option>
+                <option value="green">green</option>
+                <option value="blue">blue</option>
+                <option value="white">white</option>
+            </select> <br>
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    select color
+                    Font Color
                 </button>
                 <ul class="dropdown-menu">
                     <li><button type="button" value="blue" class="btn btn-primary">blue</button></li>
@@ -48,9 +98,8 @@
                     <li><button type="button" value="black" class="btn btn-dark">black</button></li>
                 </ul>
             </div>
-            <br>
             <button type="button" value="apply" class="btn btn-primary apply translate">apply</button>
-        </div>
+        </span>
         <br><br><br>
         <div class="middle  ">
             <img src="project.jfif" alt="wikipedia globe image" id="mainimg">            
